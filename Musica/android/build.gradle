@@ -1,0 +1,53 @@
+
+
+
+buildscript {
+    ext {
+        buildToolsVersion = "35.0.0"
+        minSdkVersion = 24
+        compileSdkVersion = 35
+        targetSdkVersion = 35
+        ndkVersion = "27.1.12297006"
+        kotlinVersion = "1.8.0"
+    }
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://maven.google.com" }  
+        maven { url "https://jitpack.io" } 
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle")
+        classpath("com.facebook.react:react-native-gradle-plugin")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+    }
+    
+
+}
+
+
+
+apply plugin: "com.facebook.react.rootproject"
+
+
+// buildscript {
+//     ext {
+//         buildToolsVersion = "35.0.0"
+//         minSdkVersion = 24
+//         compileSdkVersion = 35
+//         targetSdkVersion = 35
+//         ndkVersion = "27.1.12297006"
+//         kotlinVersion = "1.9.0" // 🔧 Use 1.9.0 instead of 2.1.20
+//     }
+//     repositories {
+//         google()
+//         mavenCentral()
+//     }
+//     dependencies {
+//         classpath("com.android.tools.build:gradle:8.3.1") // ✅ specify version
+//         classpath("com.facebook.react:react-native-gradle-plugin:0.73.4") // ✅ match your RN version
+//         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion") // ✅ version from ext
+//     }
+// }
+
+// apply plugin: "com.facebook.react.rootproject"
